@@ -1,0 +1,10 @@
+name: Test Windows Install
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Run installer
+        run: powershell -c "irm https://clams.tech/install.ps1 | iex"
+      - name: Verify
+        run: clams --version
