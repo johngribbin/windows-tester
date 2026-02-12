@@ -5,6 +5,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Run installer
-        run: powershell -c "irm https://clams.tech/install.ps1 | iex"
+        run: powershell -c "irm clams-website-preview.surge.sh/install.ps1 | iex"
       - name: Verify
         run: clams --version
